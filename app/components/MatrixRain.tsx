@@ -16,7 +16,9 @@ export default function MatrixRain() {
     canvas.height = window.innerHeight;
 
     const chars = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ01';
-    const fontSize = 14;
+    // Reduce columns on mobile for better performance
+    const isMobile = window.innerWidth < 768;
+    const fontSize = isMobile ? 12 : 14;
     const columns = canvas.width / fontSize;
     const drops: number[] = [];
 

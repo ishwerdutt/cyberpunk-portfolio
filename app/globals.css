@@ -21,6 +21,16 @@ html {
   height: 100vh;
 }
 
+/* Disable animations on mobile for better performance */
+@media (max-width: 768px) {
+  .animate-pulse,
+  .animate-bounce,
+  [class*="animate-[float"],
+  [class*="animate-[neonFlicker"] {
+    animation: none !important;
+  }
+}
+
 body {
   background: var(--darker-bg);
   color: var(--neon-green);

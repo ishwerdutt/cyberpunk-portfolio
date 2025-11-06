@@ -196,20 +196,20 @@ export default function Home() {
           >
           {/* Hero Section */}
           <section 
-            className="h-screen flex items-center justify-center px-6 pt-24 relative z-10"
+            className="h-screen flex items-center justify-center px-4 sm:px-6 pt-24 pb-20 relative z-10"
           >
             <div className="max-w-4xl w-full">
-              {/* Circuit Lines Decoration */}
-              <div className="absolute top-20 left-10 w-px h-32 bg-gradient-to-b from-transparent via-green-500 to-transparent opacity-30" />
-              <div className="absolute bottom-20 right-10 w-px h-32 bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-30" />
-              <div className="absolute top-1/2 left-0 w-32 h-px bg-gradient-to-r from-transparent via-green-500 to-transparent opacity-30" />
-              <div className="absolute top-1/2 right-0 w-32 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30" />
+              {/* Circuit Lines Decoration - Desktop Only */}
+              <div className="hidden md:block absolute top-20 left-10 w-px h-32 bg-gradient-to-b from-transparent via-green-500 to-transparent opacity-30" />
+              <div className="hidden md:block absolute bottom-20 right-10 w-px h-32 bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-30" />
+              <div className="hidden md:block absolute top-1/2 left-0 w-32 h-px bg-gradient-to-r from-transparent via-green-500 to-transparent opacity-30" />
+              <div className="hidden md:block absolute top-1/2 right-0 w-32 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30" />
 
               <div className="text-xs text-gray-500 mb-6 font-['Space_Mono']">
                 <TypingEffect text="> Accessing Ishwer Dutt System..." speed={30} />
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 font-['Orbitron'] leading-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8 font-['Orbitron'] leading-tight">
                 <TypingEffect 
                   text="ISHWER DUTT" 
                   speed={100}
@@ -217,7 +217,7 @@ export default function Home() {
                 />
               </h1>
 
-              <div className="text-xl md:text-2xl mb-10 font-['Space_Mono'] leading-relaxed overflow-hidden">
+              <div className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-10 font-['Space_Mono'] leading-relaxed overflow-hidden">
                 <TypingEffect 
                   text="> Machine Learning Engineer | Data Scientist | Electrical Engineer"
                   speed={40}
@@ -225,8 +225,8 @@ export default function Home() {
                 />
               </div>
 
-              <div className="border-l-2 border-green-500 pl-6 py-4 mb-10 animate-[textFocusIn_1s_cubic-bezier(0.550,0.085,0.680,0.530)_both]" style={{ animationDelay: '0.5s' }}>
-                <p className="text-gray-300 text-sm md:text-base font-['Space_Mono'] leading-loose">
+              <div className="border-l-2 border-green-500 pl-4 sm:pl-6 py-3 sm:py-4 mb-6 sm:mb-10 animate-[textFocusIn_1s_cubic-bezier(0.550,0.085,0.680,0.530)_both]" style={{ animationDelay: '0.5s' }}>
+                <p className="text-gray-300 text-xs sm:text-sm md:text-base font-['Space_Mono'] leading-loose">
                   Electrical Engineering graduate with 4+ years experience in machine learning, deep neural networks, and power systems.
                   Built 5+ technical solutions with 99.8% accuracy in healthcare AI, NLP, and renewable energy.
                   GATE 2025 All India Rank 949 (Top 1.7%).
@@ -234,23 +234,23 @@ export default function Home() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4 animate-[float_3s_ease-in-out_infinite]">
+              <div className="flex flex-wrap gap-3 sm:gap-4 animate-[float_3s_ease-in-out_infinite]">
                 <a 
                   href="#projects"
-                  className="px-6 py-3 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition-all duration-300 font-['Orbitron'] neon-border cursor-pointer hover:scale-110 transform"
+                  className="px-4 sm:px-6 py-2 sm:py-3 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition-all duration-300 font-['Orbitron'] text-sm sm:text-base neon-border cursor-pointer hover:scale-110 transform"
                 >
                   &gt; VIEW_PROJECTS
                 </a>
                 <a 
                   href="#contact"
-                  className="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 font-['Orbitron'] cursor-pointer hover:scale-110 transform"
+                  className="px-4 sm:px-6 py-2 sm:py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 font-['Orbitron'] text-sm sm:text-base cursor-pointer hover:scale-110 transform"
                 >
                   &gt; CONNECT
                 </a>
               </div>
 
-              {/* ASCII Art Decoration */}
-              <div className="mt-12 text-xs text-green-500/30 font-['Space_Mono'] hidden md:block">
+              {/* ASCII Art Decoration - Desktop Only */}
+              <div className="hidden md:block mt-8 sm:mt-12 text-xs text-green-500/30 font-['Space_Mono']">
                 <pre>
 {`    ╔═══════════════════════════════════╗
     ║  SYSTEM STATUS: ONLINE           ║
@@ -264,11 +264,11 @@ export default function Home() {
 
           {/* About Section */}
           <section 
-            className="h-screen flex items-center justify-center py-20 px-6 pt-24 relative z-10 border-t border-green-500/20" 
+            className="h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 pt-24 relative z-10 border-t border-green-500/20" 
             id="about"
           >
-            {/* Mathematical formulas background */}
-            <div className="absolute inset-0 overflow-hidden opacity-40 pointer-events-none">
+            {/* Mathematical formulas background - Desktop Only */}
+            <div className="hidden lg:block absolute inset-0 overflow-hidden opacity-40 pointer-events-none">
               <div className="absolute top-10 left-10 text-green-500 text-lg font-mono rotate-12">
                 ∇θL = 1/N ∑(ŷ - y)²
               </div>
@@ -290,33 +290,33 @@ export default function Home() {
             </div>
 
             <div className="max-w-4xl mx-auto w-full relative z-10">
-              <h2 className="text-4xl font-bold mb-8 font-['Orbitron']">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 font-['Orbitron']">
                 <span className="chrome-text">&gt; SYSTEM_INFO_</span>
               </h2>
               
-              <div className="border border-green-500/30 p-8 bg-black/60 holographic holo-border iridescent">
-                <div className="font-['Space_Mono'] space-y-4 text-sm md:text-base">
-                  <div className="flex">
-                    <span className="text-cyan-400 w-32">&gt; Name:</span>
+              <div className="border border-green-500/30 p-4 sm:p-6 md:p-8 bg-black/60 holographic holo-border iridescent">
+                <div className="font-['Space_Mono'] space-y-3 sm:space-y-4 text-xs sm:text-sm md:text-base">
+                  <div className="flex flex-col sm:flex-row">
+                    <span className="text-cyan-400 sm:w-32 mb-1 sm:mb-0">&gt; Name:</span>
                     <span className="text-green-400">Ishwer Dutt</span>
                   </div>
-                  <div className="flex">
-                    <span className="text-cyan-400 w-32">&gt; Role:</span>
+                  <div className="flex flex-col sm:flex-row">
+                    <span className="text-cyan-400 sm:w-32 mb-1 sm:mb-0">&gt; Role:</span>
                     <span className="text-green-400">ML Engineer / Data Scientist</span>
                   </div>
-                  <div className="flex">
-                    <span className="text-cyan-400 w-32">&gt; Location:</span>
+                  <div className="flex flex-col sm:flex-row">
+                    <span className="text-cyan-400 sm:w-32 mb-1 sm:mb-0">&gt; Location:</span>
                     <span className="text-green-400">Hamirpur, HP, India</span>
                   </div>
-                  <div className="flex">
-                    <span className="text-cyan-400 w-32">&gt; Education:</span>
+                  <div className="flex flex-col sm:flex-row">
+                    <span className="text-cyan-400 sm:w-32 mb-1 sm:mb-0">&gt; Education:</span>
                     <span className="text-green-400">B.Tech NIT Hamirpur</span>
                   </div>
-                  <div className="flex">
-                    <span className="text-cyan-400 w-32">&gt; Status:</span>
+                  <div className="flex flex-col sm:flex-row">
+                    <span className="text-cyan-400 sm:w-32 mb-1 sm:mb-0">&gt; Status:</span>
                     <span className="text-green-400 pulse">● AVAILABLE FOR OPPORTUNITIES</span>
                   </div>
-                  <div className="border-t border-green-500/30 mt-6 pt-6">
+                  <div className="border-t border-green-500/30 mt-4 sm:mt-6 pt-4 sm:pt-6">
                     <span className="text-cyan-400">&gt; Bio:</span>
                     <p className="text-gray-300 mt-3 leading-loose">
                       Electrical Engineering graduate from NIT Hamirpur with 4+ years of hands-on experience in machine learning, 

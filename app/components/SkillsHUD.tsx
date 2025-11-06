@@ -17,7 +17,7 @@ const skills = [
 
 export default function SkillsHUD() {
   return (
-    <section className="h-screen flex items-center justify-center py-24 px-6 relative z-10 border-t border-purple-500/20 snap-start">
+    <section className="h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 relative z-10 border-t border-purple-500/20 snap-start">
       {/* LLaMA Architecture Background */}
       <div className="absolute inset-0 overflow-hidden opacity-40 pointer-events-none">
         {/* LLaMA Architecture Diagram */}
@@ -65,7 +65,7 @@ export default function SkillsHUD() {
         </div>
       </div>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 font-['Orbitron'] text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 sm:mb-16 font-['Orbitron'] text-center">
           <span className="chrome-text inline-block animate-[expandContract_3s_ease-in-out_infinite,glowIntensify_2s_ease-in-out_infinite]">&gt; TECH_STACK_</span>
         </h2>
 
@@ -79,7 +79,7 @@ export default function SkillsHUD() {
             <div className="w-24 h-24 border border-green-500 rounded-full absolute"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 relative z-10">
             {skills.map((skill, index) => (
               <div
                 key={index}

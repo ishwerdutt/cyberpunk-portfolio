@@ -45,7 +45,7 @@ export default function ProjectsShowcase() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section className="h-screen flex items-center justify-center py-24 px-6 relative z-10 border-t border-cyan-400/20 snap-start">
+    <section className="h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 relative z-10 border-t border-cyan-400/20 snap-start">
       {/* Neural Network Background */}
       <div className="absolute inset-0 overflow-hidden opacity-30 pointer-events-none">
         <svg width="100%" height="100%" className="text-cyan-400">
@@ -71,11 +71,11 @@ export default function ProjectsShowcase() {
         </svg>
       </div>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 font-['Orbitron'] text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 sm:mb-16 font-['Orbitron'] text-center">
           <span className="chrome-text inline-block animate-[expandContract_3s_ease-in-out_infinite,glowIntensify_2s_ease-in-out_infinite]">&gt; PROJECTS_</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project) => (
             <div
               key={project.id}

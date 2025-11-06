@@ -51,7 +51,7 @@ export default function ContactTerminal() {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center py-24 px-6 relative z-10 border-t border-green-500/20 snap-start">
+    <section className="h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 relative z-10 border-t border-green-500/20 snap-start">
       {/* Data Flow & Gradient Descent Visualization */}
       <div className="absolute inset-0 overflow-hidden opacity-40 pointer-events-none">
         <div className="absolute top-20 left-20 text-green-500 font-mono text-base">
@@ -78,11 +78,11 @@ export default function ContactTerminal() {
         </div>
       </div>
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 font-['Orbitron'] text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 sm:mb-16 font-['Orbitron'] text-center">
           <span className="chrome-text inline-block animate-[expandContract_3s_ease-in-out_infinite,glowIntensify_2s_ease-in-out_infinite]">&gt; CONNECT_</span>
         </h2>
 
-        <div className="border border-green-500 bg-black/80 p-8 font-['Space_Mono'] text-sm holographic holo-border iridescent">
+        <div className="border border-green-500 bg-black/80 p-4 sm:p-6 md:p-8 font-['Space_Mono'] text-xs sm:text-sm holographic holo-border iridescent">
           {/* Terminal header */}
           <div className="flex items-center gap-2 pb-4 border-b border-green-500/30 mb-6">
             <div className="w-3 h-3 rounded-full bg-red-500"></div>
