@@ -83,7 +83,7 @@ export default function SkillsHUD() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="group relative p-6 border border-green-500/30 bg-black/70 hover:border-cyan-400 hover:bg-black/85 transition-all duration-300 holographic"
+                className="group relative p-6 border border-green-500/30 bg-black/70 hover:border-cyan-400 hover:bg-black/85 transition-all duration-300 holographic holo-border iridescent"
                 style={{
                   animationDelay: `${index * 0.1}s`
                 }}

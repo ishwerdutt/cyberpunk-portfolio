@@ -145,6 +145,78 @@ body {
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 255, 65, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(0, 255, 65, 0.1) 25%,
+    rgba(0, 212, 255, 0.2) 50%,
+    rgba(201, 0, 255, 0.1) 75%,
+    transparent 100%
+  );
+  animation: holographicShine 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes holographicShine {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Iridescent overlay */
+.iridescent {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 128, 0.05) 0%,
+    rgba(0, 212, 255, 0.05) 25%,
+    rgba(0, 255, 65, 0.05) 50%,
+    rgba(201, 0, 255, 0.05) 75%,
+    rgba(255, 0, 128, 0.05) 100%
+  );
+  background-size: 200% 200%;
+  animation: iridescentShift 6s ease infinite;
+}
+
+@keyframes iridescentShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Holographic border */
+.holo-border {
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #00ff41, #00d4ff, #c900ff, #00ff41) border-box;
+  background-size: 200% 200%;
+  animation: borderShift 4s linear infinite;
+}
+
+@keyframes borderShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Chrome effect */

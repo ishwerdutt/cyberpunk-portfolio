@@ -80,9 +80,9 @@ export default function ProjectsShowcase() {
             <div
               key={project.id}
               className={`
-                relative p-8 border transition-all duration-300 cursor-pointer
+                relative p-8 border transition-all duration-300 cursor-pointer holo-border
                 ${hoveredId === project.id 
-                  ? 'border-cyan-400 neon-border bg-black/60' 
+                  ? 'border-cyan-400 neon-border bg-black/60 iridescent' 
                   : 'border-green-500/30 bg-black/40'
                 }
                 holographic

@@ -82,7 +82,7 @@ export default function ContactTerminal() {
           <span className="chrome-text inline-block animate-[expandContract_3s_ease-in-out_infinite,glowIntensify_2s_ease-in-out_infinite]">&gt; CONNECT_</span>
         </h2>
 
-        <div className="border border-green-500 bg-black/80 p-8 font-['Space_Mono'] text-sm holographic">
+        <div className="border border-green-500 bg-black/80 p-8 font-['Space_Mono'] text-sm holographic holo-border iridescent">
           {/* Terminal header */}
           <div className="flex items-center gap-2 pb-4 border-b border-green-500/30 mb-6">
             <div className="w-3 h-3 rounded-full bg-red-500"></div>

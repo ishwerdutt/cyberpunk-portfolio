@@ -6,6 +6,7 @@ import TypingEffect from './components/TypingEffect';
 import ProjectsShowcase from './components/ProjectsShowcase';
 import SkillsHUD from './components/SkillsHUD';
 import ContactTerminal from './components/ContactTerminal';
+import Navbar from './components/Navbar';
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
@@ -14,6 +15,12 @@ export default function Home() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const totalSections = 5;
+
+  const handleNavigation = (index: number) => {
+    setIsTransitioning(true);
+    setCurrentSection(index);
+    setTimeout(() => setIsTransitioning(false), 800);
+  };
 
   useEffect(() => {
     const sequence = [
@@ -83,6 +90,38 @@ export default function Home() {
 
   return (
     <div className="h-screen overflow-hidden relative bg-black text-green-400" style={{ cursor: 'none' }}>
+      {/* Navbar */}
+      {showContent && <Navbar currentSection={currentSection} onNavigate={handleNavigation} />}
+
+      {/* Holographic Overlay Effects */}
+      {showContent && (
+        <>
+          {/* Top-left holographic panel */}
+          <div className="fixed top-20 left-10 w-64 h-40 holographic iridescent rounded-lg opacity-30 pointer-events-none z-[90] hidden lg:block">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-purple-500/10 rounded-lg" />
+          </div>
+          
+          {/* Top-right holographic panel */}
+          <div className="fixed top-40 right-10 w-48 h-48 holographic iridescent rounded-full opacity-20 pointer-events-none z-[90] hidden lg:block">
+            <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-cyan-500/10 rounded-full" />
+          </div>
+          
+          {/* Bottom-left floating element */}
+          <div className="fixed bottom-32 left-20 w-56 h-32 holographic rounded-lg opacity-25 pointer-events-none z-[90] hidden lg:block animate-[float_6s_ease-in-out_infinite]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 to-green-500/10 rounded-lg" />
+          </div>
+          
+          {/* Floating holographic orbs */}
+          <div className="fixed top-1/3 right-1/4 w-24 h-24 holographic rounded-full opacity-15 pointer-events-none z-[90] hidden xl:block animate-[float_8s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full blur-xl" />
+          </div>
+          
+          <div className="fixed bottom-1/4 left-1/3 w-32 h-32 holographic rounded-full opacity-15 pointer-events-none z-[90] hidden xl:block animate-[float_10s_ease-in-out_infinite]" style={{ animationDelay: '2s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-xl" />
+          </div>
+        </>
+      )}
+
       {/* Crosshair Cursor */}
       {showContent && (
         <>
@@ -157,7 +196,7 @@ export default function Home() {
           >
           {/* Hero Section */}
           <section 
-            className="h-screen flex items-center justify-center px-6 relative z-10"
+            className="h-screen flex items-center justify-center px-6 pt-24 relative z-10"
           >
             <div className="max-w-4xl w-full">
               {/* Circuit Lines Decoration */}
@@ -225,7 +264,7 @@ export default function Home() {
 
           {/* About Section */}
           <section 
-            className="h-screen flex items-center justify-center py-20 px-6 relative z-10 border-t border-green-500/20" 
+            className="h-screen flex items-center justify-center py-20 px-6 pt-24 relative z-10 border-t border-green-500/20" 
             id="about"
           >
             {/* Mathematical formulas background */}
@@ -255,7 +294,7 @@ export default function Home() {
                 <span className="chrome-text">&gt; SYSTEM_INFO_</span>
               </h2>
               
-              <div className="border border-green-500/30 p-8 bg-black/60 holographic">
+              <div className="border border-green-500/30 p-8 bg-black/60 holographic holo-border iridescent">
                 <div className="font-['Space_Mono'] space-y-4 text-sm md:text-base">
                   <div className="flex">
                     <span className="text-cyan-400 w-32">&gt; Name:</span>
